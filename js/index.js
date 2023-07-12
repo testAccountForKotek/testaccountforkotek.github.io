@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     elements.calendarButton.addEventListener('click', function () {
-        const contactAddress = '../html/calendar.html';
+        const contactAddress = '../../html/calendar.html';
         disappear(contactAddress);
     });
 
