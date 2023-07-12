@@ -56,27 +56,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     elements.portfolioButton.addEventListener('click', function () {
-        const portfolioAddress = 'portfolio.html';
+        const portfolioAddress = '../html/portfolio.html';
         disappear(portfolioAddress);
     });
 
     elements.aboutButton.addEventListener('click', function () {
-        const aboutAddress = 'about.html';
+        const aboutAddress = '../html/about.html';
         disappear(aboutAddress);
     });
 
     elements.contactButton.addEventListener('click', function () {
-        const contactAddress = 'contact.html';
+        const contactAddress = '../html/contact.html';
         disappear(contactAddress);
     });
 
     elements.calendarButton.addEventListener('click', function () {
-        const contactAddress = 'calendar.html';
+        const contactAddress = '../html/calendar.html';
         disappear(contactAddress);
     });
 
     elements.prepareButton.addEventListener('click', function () {
-        const prepareAddress = 'prepare.html';
+        const prepareAddress = '../html/prepare.html';
         disappear(prepareAddress);
     });
 
