@@ -1,0 +1,87 @@
+                                                                                                             *PAGE START*
+                                                                                                                  |
+                                                                                                                  ↓
+                                                                                                *listener* DOMContentLoaded [set *document*]
+                                                                                                                  ↓
+                                                                                                   *event* DOMContentLoaded [triggered *document*]
+                                                                                                                  ↓
+                                                                                                *listener* DOMContentLoaded [triggered *document*]
+                                                                                                                  |
+                                                                                                                 !↓!
+                                                                                                  *BUILD OF VARIABLES && FUNCTIONS*
+                                                                                                                  |
+                                                                                                                  ↓
+                                                                                                    *listener* keydown [set *document*]
+                                                                                                                  ↓
+                                                                                                     *listener* click [set *elements.arrowUp*]
+                                                                                                                  ↓
+                                                                                                     *listener* click [set *elements.arrowDown*]
+                                                                                                                  ↓
+                                                                                                     *listener* click [set *elements.arrowLeft*]
+                                                                                                                  ↓
+                                                                                                     *listener* click [set *elements.arrowRight*]
+                                                                                                                  ↓
+                                                                                                     *listener* click [set *elements.backButton*]
+                                                                                                                  ↓
+                                                                                                     *listener* click [set *elements.backButton*]
+                                                                                                                  |
+                                                                                                                  ↓
+                                                                                                         *PAGE FULLY LOADED*
+                                                                                                                  |
+                                                                                                                  ↓
+                                                                                                *function* appendPictures() [triggered]
+                                                                                                                 |||
+                                              ┌---------------------- *function* setRows() [triggered] !<!-------┘|└-------!>! *function* addCellListeners() [triggered] ----------------------┐
+                                              |                                                                  !↓!                                                                           |
+                                             !↓!                                *function* setTimeout(appear, transitionsDurations.pageAppear) [triggered]                                    !↓!
+     ┌-----------!>! *function* utilityAssistForAnimations(direction) [triggered]                                !↓!                                                              *listener* click [set *elements.pictureCell.item(i)*]
+     |                !↑!                    !↓!                                              *async function* appear() [triggered]
+     | ┌---------------┘   *function* disappearArrows() [triggered]                                              !↓! await
+     | |                                                                                  *async function* appearPicture() [triggered] <-> recurrent
+     | |                                                                                                         !↓!
+     | |                                                                                        *function* setImageLinks() [triggered]
+     | |                                                                                                          |
+     | |    *event* click [triggered *elements.arrowDown*]                                                        ↓
+     | |             !↓!                                                                                *PAGE FULLY DISPLAYED*
+     | | *listener* click [triggered *elements.arrowDown*]
+     | |              |
+     | |              |                                     *event* keydown [triggered *document*]       *event* click [triggered *elements.arrowUp*]
+     | |              |                                               !↓!                                         !↓!
+     | |              |                                  *listener* keydown [triggered *document*]    *listener* click [triggered *elements.arrowUp*]
+     | |              |                                               !↓!                                          |
+     | |              └------------------------!>! *function* captureArrows(event) [triggered] !<!-----------------┘
+     | |                                                               |
+     | |                                                               |
+     | |                                                               |
+     | |                                                               |
+     | |                                                               |
+     | |                                                               OR----------------------------------------------------------------------------------------------------┐
+     | |                                                               |                                                                                                     |
+     | |                                                               OR----------------------------------------------┐                                                     |
+     | |                                                              !↓!                                             !↓!                                                    |
+     | |                                             *function* scrollRowsUp() [triggered]           *function* scrollRowsDown() [triggered]                                 |
+     | | if *function* checkVisibility() [triggered] !↑!              !↓!                                              |  !↑!  if *function* checkVisibility() [triggered]   |
+     | |                                              | *function* setRows() [triggered] !<!---------------------------┘   |                                                 |
+     | |                                              |                |                                                   |                                                 |
+     | └----------------------------------------------+----------------┘          ┌----------------------------------------+---┌============================================OR
+     |                                                |                          !↓!                                       |  !↓!
+     |                                                └------ *function* swipePicturesLeft() [triggered]   *function* swipePicturesRight() [triggered]
+     |                                                                           !↓!                                           |
+     └----------------------------------------------------------- *function* setSwipes() [triggered] !<!-----------------------┘
+
+
+
+
+                                                                                                        *event* click [triggered *backButton*]
+                                                                                                                 !↓!
+                                                                                                     *listener* click [triggered *backButton*]
+                                                                                                                 !↓!
+                                                                                            *function* disappear(indexAddress) [triggered]
+                                                                                                                 !↓!
+                                                                                             *function* relocate(indexAddress) [triggered]
+                                                                                                                  |
+                                                                                                                 !↓!
+                                                                                                     *REDIRECTION TO index.html*
+                                                                                                                  |
+                                                                                                                  ↓
+                                                                                                            *PAGE CLOSED*

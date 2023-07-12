@@ -1,0 +1,45 @@
+                                                                                               *PAGE START*
+                                                                                                    |
+                                                                                                    ↓
+                                                                                  *listener* DOMContentLoaded [set *document*]
+                                                                                                    ↓
+                                                                                     *event* DOMContentLoaded [triggered *document*]
+                                                                                                   !↓!
+                                                                                  *listener* DOMContentLoaded [triggered *document*]
+                                                                                                    |
+                                                                                                   !↓!
+                                                                                    *BUILD OF VARIABLES && FUNCTIONS*
+                                                                                                    |
+                                                                                                    ↓
+                                                                                       *listener* click [set *elements.portfolioButton*]
+                                                                                                    ↓
+                                                                                       *listener* click [set *elements.aboutButton*]
+                                                                                                    ↓
+                                                                                       *listener* click [set *elements.contactButton*]
+                                                                                                    ↓
+                                                                                       *listener* click [set *elements.prepareButton*]
+                                                                                                    |
+                                                                                                    ↓
+                                                                                           *PAGE FULLY LOADED*
+                                                                                                    |
+                                                                                                    ↓
+                                                                   *function* setTimeout(appear, transitionsDurations.pageAppear) [triggered]
+                                                                                                   !↓!
+                                                                                      *function* appear() [triggered]
+                                                                                                    |
+                                                                                                    ↓
+                                                                                          *PAGE FULLY DISPLAYED*
+
+
+              *event* click [triggered *portfolioButton*]         *event* click [triggered *aboutButton*]             *event* click [triggered *contactButton*]          *event* click [triggered *prepareButton*]
+                       !↓!                                                 !↓!                                                 !↓!                                                !↓!
+           *listener* click [triggered *portfolioButton*]      *listener* click [triggered *aboutButton*]          *listener* click [triggered *contactButton*]       *listener* click [triggered *prepareButton*]
+                       !↓!                                                 !↓!                                                 !↓!                                                !↓!
+ *function* disappear(portfolioAddress) [triggered]    *function* disappear(aboutAddress) [triggered]    *function* disappear(contactAddress) [triggered]    *function* disappear(prepareAddress) [triggered]
+                       !↓!                                                 !↓!                                                 !↓!                                                !↓!
+ *function* relocate(portfolioAddress) [triggered]     *function* relocate(aboutAddress) [triggered]     *function* relocate(contactAddress) [triggered]     *function* relocate(prepareAddress) [triggered]
+                        |                                                   |                                                   |                                                  |
+                       !↓!                                                 !↓!                                                 !↓!                                                !↓!
+           *REDIRECTION TO portfolio.html*                     *REDIRECTION TO about.html*                         *REDIRECTION TO contact.html*                      *REDIRECTION TO prepare.html*
+                        |                                                   |                                                   |                                                  |
+                        └---------------------------------------------------└=============== > *PAGE CLOSED* < =================┘--------------------------------------------------┘
