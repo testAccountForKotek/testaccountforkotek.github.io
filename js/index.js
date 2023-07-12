@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     elements.contactButton.addEventListener('click', function () {
-        const contactAddress = '../html/contact.html';
+        const contactAddress = 'https://testaccountforkotek.github.io/contact.html';
         disappear(contactAddress);
     });
 
