@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     elements.backButton.addEventListener('click', function () {
-        const indexAddress = 'prepare.html';
+        const indexAddress = 'https://testaccountforkotek.github.io/html/prepare.html';
         disappear(indexAddress);
     });
 
