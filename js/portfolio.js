@@ -848,7 +848,7 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.arrowRight.addEventListener('click', eve => captureArrowsButtons(eve.target.id));
 
     elements.backButton.addEventListener('click', function () {
-        const indexAddress = 'index.html';
+        const indexAddress = 'https://testaccountforkotek.github.io/index.html';
         disappear(indexAddress);
     });
 
