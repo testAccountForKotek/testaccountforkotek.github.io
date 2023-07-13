@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     elements.seeTheGearButton.addEventListener('click', function () {
-        const gearAddress = 'gear.html';
+        const gearAddress = 'https://testaccountforkotek.github.io/html/gear.html';
         disappear(gearAddress);
     });
 
     elements.backButton.addEventListener('click', function () {
-        const index2Address = 'index.html';
+        const indexAddress = 'https://testaccountforkotek.github.io/index.html';
         disappear(index2Address);
     });
 
