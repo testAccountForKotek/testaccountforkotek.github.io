@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     elements.portfolioButton.addEventListener('click', function () {
-        const portfolioAddress = '../html/portfolio.html';
+        const portfolioAddress = 'https://testaccountforkotek.github.io/portfolio.html';
         disappear(portfolioAddress);
     });
 
     elements.aboutButton.addEventListener('click', function () {
-        const aboutAddress = '../html/about.html';
+        const aboutAddress = 'https://testaccountforkotek.github.io/about.html';
         disappear(aboutAddress);
     });
 
@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     elements.calendarButton.addEventListener('click', function () {
-        const contactAddress = '../../html/calendar.html';
+        const contactAddress = 'https://testaccountforkotek.github.io/calendar.html';
         disappear(contactAddress);
     });
 
     elements.prepareButton.addEventListener('click', function () {
-        const prepareAddress = '../html/prepare.html';
+        const prepareAddress = 'https://testaccountforkotek.github.io/prepare.html';
         disappear(prepareAddress);
     });
 
