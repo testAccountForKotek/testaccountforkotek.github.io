@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     elements.backButton.addEventListener('click', function () {
         const indexAddress = 'https://testaccountforkotek.github.io/index.html';
-        disappear(index2Address);
+        disappear(indexAddress);
     });
 
     setTimeout(appear, transitionsDurations.pageAppear);
