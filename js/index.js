@@ -56,27 +56,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     elements.portfolioButton.addEventListener('click', function () {
-        const portfolioAddress = 'https://testaccountforkotek.github.io/portfolio.html';
+        const portfolioAddress = 'https://testaccountforkotek.github.io/html/portfolio.html';
         disappear(portfolioAddress);
     });
 
     elements.aboutButton.addEventListener('click', function () {
-        const aboutAddress = 'https://testaccountforkotek.github.io/about.html';
+        const aboutAddress = 'https://testaccountforkotek.github.io/html/about.html';
         disappear(aboutAddress);
     });
 
     elements.contactButton.addEventListener('click', function () {
-        const contactAddress = 'https://testaccountforkotek.github.io/contact.html';
+        const contactAddress = 'https://testaccountforkotek.github.io/html/contact.html';
         disappear(contactAddress);
     });
 
     elements.calendarButton.addEventListener('click', function () {
-        const contactAddress = 'https://testaccountforkotek.github.io/calendar.html';
+        const contactAddress = 'https://testaccountforkotek.github.io/html/calendar.html';
         disappear(contactAddress);
     });
 
     elements.prepareButton.addEventListener('click', function () {
-        const prepareAddress = 'https://testaccountforkotek.github.io/prepare.html';
+        const prepareAddress = 'https://testaccountforkotek.github.io/html/prepare.html';
         disappear(prepareAddress);
     });
 
