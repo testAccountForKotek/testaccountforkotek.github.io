@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getConfigFile() {
         // const fileAddress = 'https://drive.google.com/file/d/15USHSjPl2kOjUL7WReHgFiwFVEUXJtqo/view?usp=share_link';
-        const fileAddress = 'https://drive.google.com/uc?id=15USHSjPl2kOjUL7WReHgFiwFVEUXJtqo';
+        const fileAddress = 'https://pdfhost.io/v/t9pHOUjTO_Pusty';
         const requestInit = {
             'headers' : {
                 'Access-Control-Allow-Origin' : '*',
