@@ -82,4 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(appear, transitionsDurations.pageAppear);
 
+    document.body.clientHeight = window.innerHeight;
+
 });
