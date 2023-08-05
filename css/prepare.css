@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-position: center;
+    background-image: url("../assets/tloNalesnikart.jpg");
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.4fr 1.1fr 1.1fr 0.4fr;
+    min-height: 100vh;
+    background-position: center;
+    background-image: url("../assets/tloNalesnikartDark.jpg");
+    transition-property: opacity;
+    transition-duration: 300ms;
+}
+
+h1 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    color: rgb(235, 223, 192);
+    transition-property: opacity;
+    transition-duration: 200ms;
+    opacity: 0;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: rgba(53, 53, 49, 0.5);
+    color: rgb(235, 223, 192);
+    border-radius: 10px;
+}
+
+.leftUpperCell {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding-left: 30%;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    opacity: 0;
+}
+
+.middleUpperCell {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-right: 15%;
+    padding-left: 15%;
+    display: flex;
+    align-items: center;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    opacity: 0;
+}
+
+.leftBottomCell {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding-left: 30%;
+    display: flex;
+    align-items: center;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    opacity: 0;
+}
+
+.middleBottomCell {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding-right: 15%;
+    padding-left: 15%;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    opacity: 0;
+}
+
+.rightCell {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    padding-right: 30%;
+    display: grid;
+    grid-template-rows: auto min-content min-content;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    opacity: 0;
+}
+
+button {
+    display: block;
+    color: black;
+    background-color: rgb(235, 223, 192);
+    border-color: #00000000;
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    transition-property: background-color, color, border-color, border-style, border-width;
+    transition: 100ms;
+}
+
+button:hover {
+    background-color: #00000000;
+    border-color: rgb(235, 223, 192);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(235, 223, 192);
+}
+
+.buttonRight {
+    grid-column: 1 / 2;
+}
+
+#buttonGear {
+    grid-row: 2 / 3;
+}
+
+#buttonBack {
+    grid-row: 3 / 4;
+    margin-top: 3%;
+}
