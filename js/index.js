@@ -83,7 +83,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     setTimeout(appear, transitionsDurations.pageAppear);
-
-    document.grid.clientHeight = window.innerHeight;
-
+    
 });
