@@ -1,0 +1,202 @@
+:root {
+    --cell-appear-time: 200ms;
+    --button-animation-time: 100ms;
+    --beige-color: rgb(235, 223, 192);
+    --text-background-color: rgba(245, 245, 245, 0.5);
+    --standard-border-radius: 10px;
+    --mobile-border-radius: 1.5vh;
+    --standard-side-padding-full: 30%;
+    --standard-side-padding-half: 15%;
+    --standard-side-padding-third: 10%;
+    --button-height-mobile: 5vh;
+    --button-height-desktop: 60px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-position: center;
+    background-image: url("../assets/tloNalesnikart.jpg");
+}
+
+.grid {
+    display: grid;
+    min-height: 100vh;
+}
+
+h1 {
+    grid-row: 1 / 2;
+    text-align: center;
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+h2 {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    background-color: var(--text-background-color);
+}
+
+.leftCell {
+    grid-row: 2 / 4;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+#daysBar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 80%;
+    background-color: var(--text-background-color);
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.currentMonthDay {
+    transition-property: background-color, color;
+    transition-duration: var(--button-animation-time);
+}
+
+.rightCell {
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+button {
+    display: block;
+    color: var(--beige-color);
+    background-color: black;
+    border-color: #00000000;
+    width: 100%;
+    transition-property: background-color, color, border-color, border-style, border-width;
+    transition-duration: var(--button-animation-time);
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) {
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 0.3fr 1.2fr 1.2fr 0.3fr;
+    }
+
+    h1 {
+        margin-right: var(--standard-side-padding-third);
+        margin-left: var(--standard-side-padding-third);
+        font-size: 4vh;
+    }
+
+    h2 {
+        font-size: 2.5vh;
+        border-radius: var(--mobile-border-radius);
+    }
+
+    .leftCell {
+        padding-left: var(--standard-side-padding-third);
+        padding-right: var(--standard-side-padding-third);
+    }
+
+    .day {
+        font-size: 3vw;
+    }
+
+    .rightCell {
+        grid-row: 4 / 5;
+        padding-right: var(--standard-side-padding-third);
+        padding-left: var(--standard-side-padding-third);
+    }
+
+    .imageParent {
+        display: none;
+    }
+
+    button {
+        font-size: 2vh;
+        height: var(--button-height-mobile);
+        border-radius: var(--mobile-border-radius);
+    }
+
+}
+
+@media only screen and (min-aspect-ratio: 1001 / 1000) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.4fr 1.1fr 1.1fr 0.4fr;
+    }
+
+    h1 {
+        grid-column: 1 / 4;
+    }
+
+    h2 {
+        border-radius: var(--standard-border-radius);
+    }
+
+    .leftCell {
+        grid-column: 1 / 3;
+        padding-left: var(--standard-side-padding-half);
+        padding-right: 5%;
+    }
+
+    .currentMonthDay:hover {
+        background-color: gray !important;
+        color: var(--button-animation-time);
+    }
+
+    .rightCell {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        padding-right: var(--standard-side-padding-full);
+        display: grid;
+        grid-template-rows: 1.8fr 0.2fr;
+    }
+
+    .imageParent {
+        position: relative;
+    }
+
+    .imageParent img {
+        position: absolute;
+        width: 100%;
+        max-height: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    button {
+        height: var(--button-height-desktop);
+        border-radius: var(--standard-border-radius);
+    }
+
+    button:hover {
+        background-color: #00000000;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        color: black;
+    }
+
+    .buttonRight {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+}

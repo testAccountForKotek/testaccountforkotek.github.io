@@ -1,0 +1,191 @@
+:root {
+    --one-step-of-image-animation-time: 300ms;
+    --cell-appear-time: 200ms;
+    --button-animation-time: 100ms;
+    --beige-color: rgb(235, 223, 192);
+    --text-background-color: rgba(245, 245, 245, 0.5);
+    --standard-border-radius: 10px;
+    --mobile-border-radius: 1.5vh;
+    --standard-side-padding-full: 30%;
+    --standard-side-padding-third: 10%;
+    --button-height-mobile: 5vh;
+    --button-height-desktop: 60px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-position: center;
+    background-image: url("../assets/tloNalesnikart.jpg");
+}
+
+.grid {
+    display: grid;
+    min-height: 100vh;
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+.leftCell {
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+.rightCell {
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+h1 {
+    grid-row: 1 / 2;
+    text-align: center;
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+button {
+    display: block;
+    color: var(--beige-color);
+    background-color: black;
+    width: 100%;
+    transition-property: background-color, color, border-color, border-style, border-width;;
+    transition-duration: var(--button-animation-time);
+}
+
+@media only screen and (max-aspect-ratio: 127 / 100) {
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 0.3fr 1.2fr 1.2fr 0.3fr;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../assets/baba1.png");
+    }
+
+    .leftCell {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10%;
+        grid-row: 3 / 4;
+        padding-right: var(--standard-side-padding-third);
+        padding-left: var(--standard-side-padding-third);
+    }
+
+    .middleCell {
+        display: none;
+    }
+
+    .rightCell {
+        grid-row: 4 / 5;
+        padding-right: var(--standard-side-padding-third);
+        padding-left: var(--standard-side-padding-third);
+    }
+
+    h1 {
+        font-size: 4vh;
+        background-color: rgba(245, 245, 245, 0.5);
+        border-radius: var(--mobile-border-radius);
+        margin-left: var(--standard-side-padding-third);
+        margin-right: var(--standard-side-padding-third);
+    }
+
+    h2 {
+        display: none;
+    }
+
+    button {
+        font-size: 2vh;
+        border-radius: var(--mobile-border-radius);
+        border-color: var(--beige-color);
+        height: var(--button-height-mobile);
+        border-width: 2px;
+        border-style: solid;
+    }
+
+}
+
+@media only screen and (min-aspect-ratio: 127 / 100) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.4fr 1.1fr 1.1fr 0.4fr;
+    }
+
+    .leftCell {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        padding-left: var(--standard-side-padding-full);
+    }
+
+    .middleCell {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+        position: relative;
+        transition-property: opacity;
+        transition-duration: var(--cell-appear-time);
+        opacity: 0;
+    }
+
+    .rightCell {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        padding-right: var(--standard-side-padding-full);
+        display: grid;
+        grid-template-rows: 1.4fr 0.4fr 0.2fr;
+    }
+
+    h1 {
+        grid-column: 1 / 4;
+        border-radius: var(--standard-border-radius);
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        background-color: var(--text-background-color);
+        border-radius: var(--standard-border-radius);
+    }
+
+    .middleCell img {
+        position: absolute;
+        width: 100%;
+        max-height: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    button {
+        border-radius: var(--standard-border-radius);
+        border-color: #00000000;
+        height: var(--button-height-desktop);
+    }
+
+    button:hover {
+        background-color: #00000000;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        color: black;
+    }
+
+    .buttonLeft {
+        margin-bottom: 3%;
+    }
+
+    .descriptionRight {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .buttonRight {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+}
