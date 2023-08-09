@@ -17,7 +17,8 @@
 
 body {
     margin: 0;
-    height: 100dvh;
+    min-height: 100dvh;
+    max-height: 100dvh;
     background-position: center;
     background-color: var(--beige-color);    
     background-image: url("../assets/tloNalesnikart.jpg");
