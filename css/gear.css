@@ -1,0 +1,156 @@
+:root {
+    --cell-appear-time: 200ms;
+    --button-animation-time: 100ms;
+    --beige-color: rgb(235, 223, 192);
+    --text-background-color: rgba(245, 245, 245, 0.5);
+    --standard-border-radius: 10px;
+    --mobile-border-radius: 1.5vh;
+    --standard-side-padding-full: 30%;
+    --standard-side-padding-half: 15%;
+    --standard-side-padding-third: 10%;
+    --standard-button-margin: 3%;
+    --button-height-mobile: 5vh;
+    --button-height-desktop: 60px;
+    --button-font-size: 2vh;
+    --h1-mobile-font-size: 4vh;
+    --h2-mobile-font-size: 2.5vh;
+}
+
+body {
+    margin: 0;
+    min-height: 100svh;
+    min-height: 100vh;
+    background-position: center;
+    background-image: url("../assets/tloNalesnikartDark.jpg");
+}
+
+.grid {
+    display: grid;
+    min-height: 100vh;
+}
+
+h1 {
+    grid-row: 1 / 2;
+    text-align: center;
+    color: var(--beige-color);
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+.leftCell {
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+.rightCell {
+    transition-property: opacity;
+    transition-duration: var(--cell-appear-time);
+    opacity: 0;
+}
+
+button {
+    display: block;
+    color: black;
+    background-color: var(--beige-color);
+    border-color: #00000000;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    font-size: var(--button-font-size);
+    margin-top: var(--standard-button-margin);
+    transition-property: background-color, color, border-color, border-style, border-width;
+    transition-duration: var(--button-animation-time);
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) {
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 0.3fr 2.1fr 0.6fr;
+    }
+
+    h1 {
+        font-size: var(--h1-mobile-font-size);
+    }
+
+    .leftCell {
+        grid-row: 2 / 3;
+        padding-left: var(--standard-side-padding-third);
+        margin-bottom: 5%;
+    }
+
+    .rightCell {
+        grid-row: 3 / 4;
+        padding-right: var(--standard-side-padding-third);
+        padding-left: var(--standard-side-padding-third);
+    }
+
+    canvas {
+        border-radius: var(--mobile-border-radius);
+    }
+
+    button {
+        height: var(--button-height-mobile);
+        border-radius: var(--mobile-border-radius);
+    }
+
+}
+
+@media only screen and (min-aspect-ratio: 1001 / 1000) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.4fr 1.1fr 1.1fr 0.4fr;
+    }
+
+    h1 {
+        grid-column: 1 / 4;
+    }
+
+    .leftCell {
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+        padding-left: var(--standard-side-padding-half);
+    }
+
+    .rightCell {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        padding-right: var(--standard-side-padding-full);
+        display: grid;
+        grid-template-rows: auto min-content min-content;
+        transition-property: opacity;
+        transition-duration: var(--cell-appear-time);
+        opacity: 0;
+    }
+
+    canvas {
+        border-radius: var(--standard-border-radius);
+    }
+
+    button {
+        height: var(--button-height-desktop);
+        border-radius: var(--standard-border-radius);
+    }
+
+    button:hover {
+        background-color: #00000000 !important;
+        border-color: var(--beige-color) !important;
+        color: var(--beige-color) !important;
+    }
+
+    #soundButton {
+        grid-row: 2 / 3;
+    }
+
+    #backButton {
+        grid-row: 3 / 4;
+    }
+
+    .buttonRight {
+        grid-column: 1 / 2;
+    }
+
+}
