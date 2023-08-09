@@ -17,7 +17,7 @@
 
 body {
     margin: 0;
-    height: 80vh;
+    min-height: 100vh;
     background-position: center;
     background-color: var(--beige-color);    
     background-image: url("../assets/tloNalesnikart.jpg");
@@ -25,7 +25,7 @@ body {
 
 .grid {
     display: grid;
-    min-height: 100vh;
+    min-height: 80vh;
     transition-property: opacity;
     transition-duration: var(--cell-appear-time);
     opacity: 0;
